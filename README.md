@@ -1,6 +1,7 @@
 # 🧩 Template for Spring Boot Project
 
-Este é um projeto de exemplo criado com **Spring Boot 3.5.6**, utilizando **Java 21** e **Gradle (Groovy DSL)** como ferramenta de build.
+This is a sample project created with **Spring Boot 3.5.6**, 
+using **Java 21** and **Gradle (Groovy DSL)** as the build tool.
 
 ---
 
@@ -9,34 +10,34 @@ Este é um projeto de exemplo criado com **Spring Boot 3.5.6**, utilizando **Jav
 - **Java 21**
 - **Spring Boot 3.5.6**
 - **Gradle (Groovy DSL)**
-- **YAML** para configuração (`application.yaml`)
+- **YAML** for configuration (`application.yaml`)
 
-### 🔹 Pré-requisitos
-- **Java 21** instalado  
-- **Gradle 8+** (ou use o wrapper incluso)
-- IDE compatível (IntelliJ IDEA, VS Code, Eclipse, etc.)
+### 🔹 Prerequisites
+- **Java 21** installed
+- **Gradle 8+** (or use the included wrapper)
+- Compatible IDE (IntelliJ IDEA, VS Code, Eclipse, etc.)
 
-### 🔹 Passos para rodar
+### 🔹 Steps to Run
 
-1. **Clonar o repositório**
+1. **Clone the repository**
  - git clone https://github.com/seu-usuario/demo.git
  - cd demo
 
 2. **Rodar com Gradle**
  - ./gradlew bootRun
 
-3. **Acessar a aplicação**
+3. **Access the application**
  - http://localhost:8080
 
-### 🧪 Executar Testes
+### 🧪 Run Tests
 
-1. Para rodar os testes automatizados:
+1. To execute automated tests:
  - ./gradlew test
 
-### 🧰 Build do Projeto
+### 🧰 Build the Project
 
-1. Gerar o arquivo .jar:
+1. Generate the .jar file:
  - ./gradlew build
 
-2. O artefato final será criado em:
+2. The final artifact will be created at:
  - build/libs/demo-0.0.1-SNAPSHOT.jar
