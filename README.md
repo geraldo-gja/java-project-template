@@ -19,24 +19,24 @@ Este é um projeto de exemplo criado com **Spring Boot 3.5.6**, utilizando **Jav
 ### 🔹 Passos para rodar
 
 1. **Clonar o repositório**
-   git clone https://github.com/seu-usuario/demo.git
-   cd demo
+ - git clone https://github.com/seu-usuario/demo.git
+ - cd demo
 
 2. **Rodar com Gradle**
-  ./gradlew bootRun
+ - ./gradlew bootRun
 
 3. **Acessar a aplicação**
-  http://localhost:8080
+ - http://localhost:8080
 
 ### 🧪 Executar Testes
 
-- Para rodar os testes automatizados:
-  ./gradlew test
+1. Para rodar os testes automatizados:
+ - ./gradlew test
 
 ### 🧰 Build do Projeto
 
-- Gerar o arquivo .jar:
-  ./gradlew build
+1. Gerar o arquivo .jar:
+ - ./gradlew build
 
-- O artefato final será criado em:
-  build/libs/demo-0.0.1-SNAPSHOT.jar
+2. O artefato final será criado em:
+ - build/libs/demo-0.0.1-SNAPSHOT.jar
