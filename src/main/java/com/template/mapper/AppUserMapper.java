@@ -6,7 +6,7 @@ import com.template.dto.AppUserRequestDto;
 import com.template.dto.AppUserResponseDto;
 import com.template.entity.AppUser;
 
-@Mapper(componentModel = "spring")
+@Mapper(config = GenericMapper.class)
 public interface AppUserMapper extends GenericMapper<AppUser, AppUserRequestDto, AppUserResponseDto> {
 
 }
