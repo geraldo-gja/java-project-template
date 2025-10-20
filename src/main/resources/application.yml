@@ -1,4 +1,8 @@
 
+logging:
+  colors:
+    enabled: ${LOGGING_COLORS_ENABLED:false}
+
 spring:
   application:
     name: template
