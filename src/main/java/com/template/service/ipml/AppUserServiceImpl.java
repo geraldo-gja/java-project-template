@@ -10,10 +10,10 @@ import lombok.AllArgsConstructor;
 
 import com.template.repository.AppUserRepository;
 import com.template.service.AppUserService;
-import com.template.entity.AppUser;
-import com.template.mapper.AppUserMapper;
-import com.template.dto.AppUserRequestDto;
-import com.template.dto.AppUserResponseDto;
+import com.template.domain.entity.AppUser;
+import com.template.domain.mapper.AppUserMapper;
+import com.template.domain.dto.AppUserRequestDto;
+import com.template.domain.dto.AppUserResponseDto;
 
 import jakarta.persistence.EntityNotFoundException;
 

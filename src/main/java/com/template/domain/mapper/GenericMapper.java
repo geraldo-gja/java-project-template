@@ -1,4 +1,4 @@
-package com.template.mapper;
+package com.template.domain.mapper;
 
 import org.mapstruct.BeanMapping;
 import org.mapstruct.MapperConfig;

@@ -1,8 +1,8 @@
 package com.template.service;
 
-import com.template.dto.AppUserRequestDto;
+import com.template.domain.dto.AppUserRequestDto;
 
-import com.template.dto.AppUserResponseDto;
+import com.template.domain.dto.AppUserResponseDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
