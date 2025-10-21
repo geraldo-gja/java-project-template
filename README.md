@@ -18,6 +18,7 @@ using **Java 21** and **Gradle (Groovy DSL)** as the build tool.
 - **H2 Database**
 - **MapStruct**
 - **Logging - endpoint interceptor**
+- **Swagger - access the link: http://localhost:8080/swagger-ui/index.html** 
 
 ## 🔹 Prerequisites
 - **Java 21** installed
