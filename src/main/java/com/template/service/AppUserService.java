@@ -1,5 +1,6 @@
 package com.template.service;
 
+import com.template.domain.dto.AppUserFilterDto;
 import com.template.domain.dto.AppUserRequestDto;
 
 import com.template.domain.dto.AppUserResponseDto;
@@ -12,7 +13,7 @@ public interface AppUserService {
 
     AppUserResponseDto findById(Long id);
 
-    Page<AppUserResponseDto> findAll(AppUserRequestDto exampleDto, Pageable pageable);
+    Page<AppUserResponseDto> findAll(AppUserFilterDto exampleDto, Pageable pageable);
 
     AppUserResponseDto update(Long id, AppUserRequestDto requestDto);
 

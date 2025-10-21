@@ -7,11 +7,13 @@ import org.mapstruct.NullValuePropertyMappingStrategy;
 import org.mapstruct.ReportingPolicy;
 
 @MapperConfig(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
-public interface GenericMapper<ENTITY, REQUEST_DTO, RESPONSE_DTO> {
+public interface GenericMapper<ENTITY, REQUEST_DTO, RESPONSE_DTO, FILTER_DTO> {
 
     RESPONSE_DTO toResponseDto(ENTITY entity);
 
     ENTITY toEntity(REQUEST_DTO requestDto);
+
+    ENTITY filterToEntity(FILTER_DTO filterDto);
     
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     void updateEntityFromDto(REQUEST_DTO dto, @MappingTarget ENTITY entity);

@@ -1,5 +1,6 @@
 package com.template.service.ipml;
 
+import com.template.domain.dto.AppUserFilterDto;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -33,8 +34,8 @@ public class AppUserServiceImpl implements AppUserService {
     }
 
     @Override
-    public Page<AppUserResponseDto> findAll(AppUserRequestDto exampleDto, Pageable pageable) {
-        AppUser objExample = mapper.toEntity(exampleDto);
+    public Page<AppUserResponseDto> findAll(AppUserFilterDto exampleDto, Pageable pageable) {
+        AppUser objExample = mapper.filterToEntity(exampleDto);
         Example<AppUser> example = Example.of(objExample, getMatcher());
 
         Page<AppUser> users = userRepository.findAll(example, pageable);
