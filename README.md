@@ -17,6 +17,7 @@ using **Java 21** and **Gradle (Groovy DSL)** as the build tool.
 - **Lombok**
 - **H2 Database**
 - **MapStruct**
+- **Logging - endpoint interceptor**
 
 ## 🔹 Prerequisites
 - **Java 21** installed
@@ -49,7 +50,7 @@ using **Java 21** and **Gradle (Groovy DSL)** as the build tool.
  - build/libs/demo-0.0.1-SNAPSHOT.jar
 
 ### 💾 Access the H2 Console:
-URL: http://localhost:8080/h2-console
-JDBC URL: jdbc:h2:mem:testdb
-Username: sa
-Password: (leave empty)
+- URL: http://localhost:8080/h2-console
+- JDBC URL: jdbc:h2:mem:testdb
+- Username: sa
+- Password: (leave empty)
