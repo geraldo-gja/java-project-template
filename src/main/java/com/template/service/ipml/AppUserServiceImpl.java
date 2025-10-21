@@ -29,7 +29,7 @@ public class AppUserServiceImpl implements AppUserService {
     @Override
     public AppUserResponseDto findById(Long id) {
         AppUser user = userRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("AppUser não encontrado: " + id));
+                .orElseThrow(() -> new EntityNotFoundException("AppUser not found: " + id));
         return mapper.toResponseDto(user);
     }
 
@@ -69,8 +69,7 @@ public class AppUserServiceImpl implements AppUserService {
     @Override
     public AppUserResponseDto update(Long id, AppUserRequestDto requestDto) {
 
-        AppUser existingObj = userRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("AppUser não encontrado: " + id));
+        AppUser existingObj = mapper.toResponseToEntity(findById(id));
         mapper.updateEntityFromDto(requestDto, existingObj);
 
         AppUser updatedObj = userRepository.save(existingObj);
@@ -80,7 +79,7 @@ public class AppUserServiceImpl implements AppUserService {
     @Override
     public void delete(Long id) {
         if (!userRepository.existsById(id)) {
-            throw new EntityNotFoundException("AppUser não encontrado: " + id);
+            throw new EntityNotFoundException("AppUser not found: " + id);
         }
         userRepository.deleteById(id);
     }

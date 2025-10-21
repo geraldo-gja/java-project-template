@@ -14,6 +14,8 @@ public interface GenericMapper<ENTITY, REQUEST_DTO, RESPONSE_DTO, FILTER_DTO> {
     ENTITY toEntity(REQUEST_DTO requestDto);
 
     ENTITY filterToEntity(FILTER_DTO filterDto);
+
+    ENTITY toResponseToEntity(RESPONSE_DTO responseDto);
     
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     void updateEntityFromDto(REQUEST_DTO dto, @MappingTarget ENTITY entity);
