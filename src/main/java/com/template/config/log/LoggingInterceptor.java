@@ -51,8 +51,9 @@ public class LoggingInterceptor implements HandlerInterceptor {
         String method = request.getMethod();
         String color = changeColorMessage(method);
 
+        String message = color + method + " " + request.getRequestURI() + RESET + " - DURATION " + durationMs + " ms";
         //  logger.info("REQUEST: " + color + method + " " + request.getRequestURI() + RESET + " - USER: " + username);
-        logger.info("REQUEST: " + color + method + " " + request.getRequestURI() + RESET + " - DURATION " + durationMs + " ms");
+        logger.info(message);
     }
     /**
      * Records a start timestamp on the request or returns elapsed time in ms.
