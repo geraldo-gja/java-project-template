@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import org.springdoc.core.annotations.ParameterObject;
 
 import org.springframework.data.domain.Page;
@@ -64,7 +65,7 @@ public interface AppUserDoc {
                     content = @Content(schema = @Schema(implementation = AppUserResponseDto.class))
             ),
     })
-    ResponseEntity<AppUserResponseDto> create(@RequestBody AppUserRequestDto request);
+    ResponseEntity<AppUserResponseDto> create(@RequestBody @Valid AppUserRequestDto request);
 
     @PutMapping("/{id}")
     @Operation(summary = "Update an existing user")

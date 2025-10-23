@@ -24,6 +24,19 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Throwable.class)
     public ResponseEntity<ErrorResponse> handleException(Throwable ex, WebRequest request) {
         log.error(ex);
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ErrorResponse> handleValidationException(MethodArgumentNotValidException ex, WebRequest request) {
+
+        String message = ex.getBindingResult()
+                .getFieldErrors()
+                .stream()
+                .map(FieldError::getDefaultMessage)
+                .filter(m -> m != null && !m.isBlank())
+                .findFirst()
+                .orElse("Validation failed");
+
+        return buildErrorMessage(ex, request, message);
+    }
 
         HttpStatus status = determineHttpStatus(ex);
         String message = ex.getMessage() != null ? ex.getMessage() : "Internal Error";
