@@ -18,9 +18,18 @@ using **Java 21** and **Gradle (Groovy DSL)** as the build tool.
 - **H2 Database**
 - **MapStruct**
 - **Logging - endpoint interceptor**
-- **Colorized Console Logs - use environment variable `LOGGING_COLORS_ENABLED`**
-- **Swagger - access the link: http://localhost:8080/swagger-ui/index.html**
+- **Colorized Console Logs**  
+  use environment variable `LOGGING_COLORS_ENABLED`**
+- **Swagger**  
+  access the link: http://localhost:8080/swagger-ui/index.html**
 - **Spring Boot Validation**
+- **Dockerfile**  
+  build: docker build -t template-api-image  
+  docker run -d --name template-api -p 8080:8080 template-api-image
+- **docker-compose** 
+  build: docker compose build  
+  run: docker compose up  
+
 
 ## 🔹 Prerequisites
 - **Java 21** installed
